@@ -1,0 +1,53 @@
+Answer the questions below using the skills you have learned so far: 
+
+DHCP
+
+    What is the MAC address of the system attempting to get a DHCP address?
+    What address was assigned?
+    Ethernet II, Src: WistronC_a6:ce:4a (30:65:ec:a6:ce:4a), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Apple_92:5d:fd (f4:5c:89:92:5d:fd)   
+
+
+
+Telnet
+
+    What is the username and password pair used to log in to the telnet session?
+    Why else is this telnet session a bad idea?
+
+FTP
+
+    What is the username and password pair for the FTP session?
+    What are the names of the files transferred?
+    Extract the files from the transfer.
+
+TLS
+
+    Who owns the server IP for the TLS conversation involving packet 13476?
+
+HTTP
+
+    Extract the images transferred from the HTTP traffic
+        Located at packet 43357
+        Two PNG images
+    What was the search query at bing?
+    What was the MAC address of the server that responded to the POST request?
+
+SSH
+
+    Who SSH’d to Whom? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

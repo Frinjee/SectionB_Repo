@@ -1,0 +1,90 @@
+# button to convert
+# radio boxes for type of conversion
+# drop down for base selection
+# entry for user input
+# text box for displaying result
+
+-
+ra_frame = ttk.Frame(main_frame, borderwidth=4, relief='ridge', width=150, height=150)
+ra_frame.columnconfigure(3, weight=1)
+ra_frame.rowconfigure(1, weight=1)
+# radio buttons for conversion selection
+release = StringVar()
+d2b_radio = ttk.Radiobutton(ra_frame, text='dec > bin', variable=release, value=0)
+d2oct_radio = ttk.Radiobutton(ra_frame, text='dec > oct', variable=release)
+d2hexa_radio = ttk.Radiobutton(ra_frame, text='dec > hexa', variable=release)
+
+main_frame.grid(column=0, row=0)
+ra_frame.grid(column=0, row=0)
+d2b_radio.grid(column=0, row=1)
+d2oct_radio.grid(column=0, row=2)
+d2hexa_radio.grid(column=0, row=3)
+-
+#550x500 - min size
+
+
+
+def dec_to_bin():
+	
+	# Create an empty variable to store decimal input
+	number = ''
+
+	# set the while loop to repeatedly execute until the input is not numeric
+	while(not(number.isnumeric())):
+		# get user input for the decimal they want to convert &
+		# set our prev created variable 'number' to our users input
+		number = input('What is the decimal you want to convert? ')
+
+	# create temp variable '_num' and set to our converted (to integer) input variable ('number') 
+	_num = int(number)
+
+	# create an empty variable to store our converted binary below
+	bin_conv = ''
+
+	# execute the loop repeatedly while our '_num' variable is greater than 0
+	while(_num > 0):
+		# set 'bin_conv' to the (string) sum of our integer (_num % 2) + bin_conv
+		bin_conv = str(_num % 2) + bin_conv
+		# convert and set _num back to an integer sum of _num / 2
+		_num = int(_num / 2)
+
+	# print our decimal that has been converted to binary	
+	print(bin_conv)
+
+
+def dec_to_oct():
+	dec = int(input('Enter the decimal you want to convert? '))
+	_oct = 0
+	x = 0
+	_dec = dec
+	
+	while(_dec > 0):
+		_oct += ((_dec%8)*(10**x))
+		_dec = int(_dec/8)
+		x += 1
+	print((f'Octal of {dec} is: {_oct}'))
+
+
+def dec_to_hexa():
+	hex_tbl = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', 'A' , 'B', 'C', 'D', 'E', 'F']
+	dec = int(input('Enter the decimal you want to convert: '))
+	hexa = ''
+	
+	while(dec > 0):
+		re = (dec % 16)
+		hexa = hex_tbl[re] + hexa
+		dec = (dec // 16)
+	print(f'Hex of {dec:1} is: {hexa:1}')
+
+
+"""def dec_to_hex():
+	dec = int(input('Enter the decimal you want to convert'))
+	print(f'Hex of {dec} is: ', hex(dec))
+"""
+
+def hexa_to_dec():
+	hexa = input('Enter hex you want to convert: ')
+	dec = int(hexa, base=16)
+	print(f'Decimal of {hexa:1} is: {dec:1}')
+hexa_to_dec()
+	

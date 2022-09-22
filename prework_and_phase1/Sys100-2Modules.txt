@@ -1,0 +1,30 @@
+Linux is a family of Open Source Unix-like operating systems based on the Linux Kernel
+A Linux Daemon is a service running on the system level
+Linux is a software, Operating systems are software
+Networking is a service or daemon running in the Linux operating system
+Debian Linux Flavors - Mint, Kali, Ubuntu
+
+Lower case o adds a line BELOW the cursor AND puts vi in insert mode
+Upper case O adds a line ABOVE the cursor AND puts vi in insert mode
+:w saves the file
+:q! Quits the file WITHOUT saving
+/ searches for text
+dw deletes the current word
+dd deletes the current line
+i insert mode BEFORE the cursor
+a insert mode AFTER the cursor
+esc while in insert mode changes to command mode
+
+Example of a Home Directory: /home/user1
+
+/bin = Binaries
+/etc = Config
+/usr = User Binaries
+/mnt = Mounts
+/home = User data folders
+
+-ls -l = Long, detailed list
+ls -a = All files listed, including hidden files
+
+if a file does not exist but needs to be used the touch command will ensure
+you can without giving a error

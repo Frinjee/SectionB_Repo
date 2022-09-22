@@ -1,0 +1,40 @@
+SYS100-5a Lab + Quiz - Linux Shells Aliases
+
+
+
+USAGE 
+
+
+Reserved words are words that have special meaning to the shell. They are used to begin and end the shell’s compound commands
+ - if, then, else
+
+ - do, while
+
+ - fi
+    closes the if statement
+ 
+- time
+    causes timing statistics to be printed for the pipeline once it finishes
+- { }
+    Code in '{}' is executed in the current thread/process/environment and changes are preserved, to put it more succinctly, the code is run in the current scope
+
+find
+    It “finds” files. By default, it outputs their path relative to where you ran find. But, in addition of providing you with advanced “filters” it actually allows you to run commands on each of those files
+
+
+-a     
+    Print all the places that contain an executable named name
+-atime 
+    n  File was last accessed n*x hours ago
+
+-type f 
+    -specifies type to find as file
+
+-exec rm {}
+    This variant of the -exec option runs the specified command on the selected files, but the command line is built by appending each selected file name at the end
+
+-i
+    ignore case
+
+
+shift
